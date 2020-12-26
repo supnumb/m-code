@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.zhidiancan.application.mapper.ApplicationMapper">
+    <sql id="ApplicationFields">
+        `ID`,`Name`,CompanyID,Description,Status,Flag,CreateTime,UpdateTime
+    </sql>
+
+    <insert id="save" parameterType="cn.zhidiancan.application.models.Application">
+        insert into applications (<include refid="ApplicationFields"/>)
+        values (null,#{Name},#{CompanyID},#{Description},0,0,null,null);
+    </insert>
+
+    <select id="list" resultType="cn.zhidiancan.application.models.Application">
+        select
+        <include refid="ApplicationFields"/>
+        from applications;
+    </select>
+</mapper>
