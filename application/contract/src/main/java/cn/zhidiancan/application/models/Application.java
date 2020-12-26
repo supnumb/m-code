@@ -1,12 +1,17 @@
 package cn.zhidiancan.application.models;
 
+import cn.zhidiancan.framework.model.BaseModel;
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 @Data
-public class Application {
+@ApiModel("注册到中台的应用程序")
+public class Application extends BaseModel {
+    private String AppID;
+    private String Secret;
+
     private String Name;
-    private String Company;
-    private String Contact;
-    private String Telephone;
-    private int Status;
+    private int CompanyID;
+    private Company Company;
+    private String Description;
 }
