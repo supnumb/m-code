@@ -10,6 +10,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `applications`;
 CREATE TABLE `applications`  (
                                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                                 `AppCode` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+                                 `Secret` char(12) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
                                  `Name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
                                  `CompanyID` int(11) NOT NULL,
                                  `Description` varchar(3096) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
@@ -37,6 +39,7 @@ CREATE TABLE `companies`  (
                               `CreateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
                               `UpdateTime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
                               PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '注册到中台的实体企业表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '注册到中台的实体企业表' ROW_FORMAT = Compact;
 
 SET FOREIGN_KEY_CHECKS = 1;
+

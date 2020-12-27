@@ -90,6 +90,12 @@
 			<version>1.2.7</version>
 		</dependency>
 
+		<dependency>
+			<groupId>cn.zhidiancan.m</groupId>
+			<artifactId>framework</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 	</dependencies>
 
 	<dependencyManagement>

@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 @ApiModel("注册到中台的应用程序")
 public class Application extends BaseModel {
-    private String AppID;
+    private String AppCode;
     private String Secret;
 
     private String Name;

@@ -4,12 +4,12 @@
 
 <mapper namespace="cn.zhidiancan.application.mapper.ApplicationMapper">
     <sql id="ApplicationFields">
-        `ID`,`Name`,CompanyID,Description,Status,Flag,CreateTime,UpdateTime
+        `ID`,AppCode,Secret,`Name`,CompanyID,Description,Status,Flag,CreateTime,UpdateTime
     </sql>
 
     <insert id="save" parameterType="cn.zhidiancan.application.models.Application">
         insert into applications (<include refid="ApplicationFields"/>)
-        values (null,#{Name},#{CompanyID},#{Description},0,0,null,null);
+        values (null,#{AppCode},#{Secret},#{Name},#{CompanyID},#{Description},0,0,null,null);
     </insert>
 
     <select id="list" resultType="cn.zhidiancan.application.models.Application">
