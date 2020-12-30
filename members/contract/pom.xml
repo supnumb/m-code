@@ -13,11 +13,20 @@
 	<artifactId>member-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>member-api</name>
+	<packaging>jar</packaging>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>cn.zhidiancan.m</groupId>
+			<artifactId>framework</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>

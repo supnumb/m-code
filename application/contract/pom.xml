@@ -3,6 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>cn.zhidiancan.m</groupId>
+        <artifactId>m-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../m-parent</relativePath>
+    </parent>
+
     <groupId>cn.zhidiancan.m</groupId>
     <artifactId>application-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -10,10 +17,17 @@
     <description>中台模块应用</description>
     <packaging>jar</packaging>
 
-    <properties>
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <maven.compiler.target>1.6</maven.compiler.target>
-    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>cn.zhidiancan.m</groupId>
+            <artifactId>framework</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
 </project>
